@@ -65,12 +65,12 @@ export const TENANT_CONFIG: TenantConfig = {
   virtualCards: [
     {
       id: "card-recaudacion",
-      title: "BPN VIRTUAL • RECAUDACIÓN",
+      title: "MercadoPago",
       subtitle: "Cobros de cuotas y señas",
-      alias: "EVENTUM.SMA.PRODUCCION",
-      accountType: "CBU BPN",
+      alias: "twelve.bar",
+      accountType: "CVU MP",
       cbuOrCvu: "0970001200001234567890",
-      holder: "NICO ROSSI",
+      holder: "MARIANO CARMONA",
       badge: "Activa",
       gradient: "linear-gradient(135deg, #1c202a 0%, #0d0f14 100%)"
     },
@@ -78,7 +78,7 @@ export const TENANT_CONFIG: TenantConfig = {
       id: "card-gastos",
       title: "FONDO OPERATIVO • SALONES & DJ",
       subtitle: "Gastos operativos y contrataciones",
-      alias: "EVENTUM.PROVEEDORES.SMA",
+      alias: "EJEMPLO",
       accountType: "CVU Fondo",
       cbuOrCvu: "0000003100098765432109",
       holder: "PRODUCTORES SMA",
