@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* ESTILO FINEXY - MODO CLARO */
+  --bg-app: #f2f3f7;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fafbfc;
+  --bg-subtle: #f7f8fa;
+  --bg-input: #ffffff;
+  
+  /* Naranja / Coral vibrante característico de Finexy */
+  --primary-accent: #f95f35;
+  --primary-accent-hover: #e84e24;
+  --primary-subtle: #fff2ed;
+  --primary-border: #ffd8cc;
+  
+  --text-main: #14171f;
+  --text-secondary: #606775;
+  --text-muted: #9aa1b1;
+  
+  --border-light: #eaedf2;
+  --border-subtle: #f0f3f7;
+  
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+  
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 10px 25px -4px rgba(0, 0, 0, 0.06);
+  --shadow-modal: 0 24px 48px -12px rgba(0, 0, 0, 0.14);
+}
+
+/* MODO NOCTURNO FINEXY */
+[data-theme='dark'] {
+  --bg-app: #0e1117;
+  --bg-sidebar: #161b22;
+  --bg-card: #161b22;
+  --bg-card-hover: #1f2633;
+  --bg-subtle: #1c222e;
+  --bg-input: #1c222e;
+  
+  --primary-accent: #ff6f43;
+  --primary-accent-hover: #f95f35;
+  --primary-subtle: rgba(249, 95, 53, 0.15);
+  --primary-border: rgba(249, 95, 53, 0.35);
+  
+  --text-main: #f0f3f6;
+  --text-secondary: #9aa1b1;
+  --text-muted: #647082;
+  
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-modal: 0 25px 50px rgba(0, 0, 0, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d8e2;
+  border-radius: 999px;
+}
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #333d4d;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.15s ease;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  color: var(--text-main);
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.88rem;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px var(--primary-subtle);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
